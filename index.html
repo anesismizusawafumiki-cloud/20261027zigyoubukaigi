@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10月度 月末事業部会議 アジェンダ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- アイコン用のライブラリ -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: #f3f4f6;
+        }
+        .table-container { overflow-x: auto; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .chip { display:inline-block; font-size:0.875rem; padding:0.375rem 0.75rem; border-radius:0.25rem; box-shadow:0 1px 2px rgba(0,0,0,.05); border-width:1px; }
+        .chip-n { background:#f9fafb; border-color:#e5e7eb; color:#374151; }
+        .chip-r { background:#fef2f2; border-color:#fecaca; color:#b91c1c; font-weight:600; }
+    </style>
+</head>
+<body class="text-gray-800 h-[100dvh] flex flex-col bg-gray-200 overflow-hidden relative">
+
+    <!-- 固定ヘッダー -->
+    <div class="flex-shrink-0 w-full pt-4 px-4 pb-2 md:pt-6 md:px-8 max-w-5xl mx-auto z-10">
+        <header class="bg-blue-700 text-white p-4 md:p-6 rounded-xl shadow-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+                <i data-lucide="building-2" class="w-32 h-32 -mt-4 -mr-4"></i>
+            </div>
+            <div class="relative z-10">
+                <h1 class="text-xl md:text-2xl font-bold mb-3 tracking-wider">2026年10月度 月末事業部会議</h1>
+                <div class="flex flex-col md:flex-row md:gap-6 text-xs md:text-sm opacity-95 bg-blue-800/50 inline-block p-2 rounded-lg">
+                    <p class="flex items-center gap-1.5 mb-1 md:mb-0">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        10月27日（火）13:00〜
+                    </p>
+                    <p class="flex items-center gap-1.5">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        渋谷本社 会議室
+                    </p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- スライダーコンテナ -->
+    <div class="flex-grow relative overflow-hidden w-full max-w-5xl mx-auto z-0">
+        <main id="sliderTrack" class="flex h-full transition-transform duration-300 ease-in-out w-full">
+            <!-- 1. 10月度 現状数値と着地予想 -->
+            <section class="w-full h-full flex-shrink-0 overflow-y-auto px-4 md:px-8 pb-28 pt-2">
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-blue-500 min-h-full">
+                    <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center text-gray-800 border-b pb-2">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 text-blue-600"></i>
+                        1. 10月度 現状数値と着地予想の確認
+                    </h2>
+
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4 border-l-4 border-blue-500">
+                        <p class="font-bold text-gray-800 mb-1">全社の目標粗利予算（13.9億円）まで</p>
+                        <p class="text-sm text-gray-700">10〜1月の4か月で、全社の粗利 <strong class="text-blue-700">月平均 1億1,000万円</strong> が必要です。達成すると、決算賞与（全社達成分＋部署上積み分）の支給条件を満たします。</p>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded-lg mb-4 flex flex-col sm:flex-row justify-around items-center text-gray-800 font-bold border-l-4 border-blue-500">
+                        <p class="mb-2 sm:mb-0"><span class="text-gray-500 text-xs md:text-sm font-normal mr-2">10月 全社粗利（速報）</span>5,715万円</p>
+                        <p class="hidden sm:block text-gray-300">|</p>
+                        <p><span class="text-gray-500 text-xs md:text-sm font-normal mr-2">月1億1,000万円に対して</span>52.0%</p>
+                    </div>
+
+                    <h3 class="text-sm font-bold text-gray-700 mb-2">各課・各支社からのご報告（1部署3分目安）</h3>
+                    <ol class="text-sm text-gray-700 space-y-1 list-decimal pl-5 mb-4">
+                        <li>10月の着地予想（売上・粗利）</li>
+                        <li>自部署の基準ラインに対する10月の見込み（上回る／届かない）</li>
+                        <li>11月に向けた打ち手と、他部署・本社に協力してほしいこと</li>
+                    </ol>
+
+                    <div class="table-container mb-3">
+                        <table class="min-w-full border-collapse border border-gray-300 text-xs md:text-sm">
+                            <thead class="bg-gray-100 text-gray-700">
+                                <tr>
+                                    <th class="border border-gray-300 px-2 py-2 text-left">部署</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">基準ライン（月）</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">目標予算（月）</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">10月 現状（速報）</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">基準ラインに対する進捗</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">目標予算に対する進捗</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">10月 着地予想</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">第一事業部（1課・2課）</td><td class="border border-gray-300 px-2 py-2 text-right">3,000万円</td><td class="border border-gray-300 px-2 py-2 text-right">2,760万円</td><td class="border border-gray-300 px-2 py-2 text-right">1,582万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">52.7%</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">57.3%</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr class="bg-gray-50"><td class="border border-gray-300 px-2 py-2 font-semibold">関東第2課</td><td class="border border-gray-300 px-2 py-2 text-right">2,300万円</td><td class="border border-gray-300 px-2 py-2 text-right">2,568万円</td><td class="border border-gray-300 px-2 py-2 text-right">1,320万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">57.4%</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">51.4%</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">関東第3課</td><td class="border border-gray-300 px-2 py-2 text-right">2,100万円</td><td class="border border-gray-300 px-2 py-2 text-right">2,400万円</td><td class="border border-gray-300 px-2 py-2 text-right">1,149万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">54.7%</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">47.9%</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr class="bg-gray-50"><td class="border border-gray-300 px-2 py-2 font-semibold">関東第3課（SO）</td><td class="border border-gray-300 px-2 py-2 text-right">—</td><td class="border border-gray-300 px-2 py-2 text-right">902万円</td><td class="border border-gray-300 px-2 py-2 text-right">未計上</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">—</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">—</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">西日本支社</td><td class="border border-gray-300 px-2 py-2 text-right">1,800万円</td><td class="border border-gray-300 px-2 py-2 text-right">2,018万円</td><td class="border border-gray-300 px-2 py-2 text-right">1,500万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">83.3%</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">74.3%</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr class="bg-gray-50"><td class="border border-gray-300 px-2 py-2 font-semibold">横浜（住宅M・TM）</td><td class="border border-gray-300 px-2 py-2 text-right">850万円</td><td class="border border-gray-300 px-2 py-2 text-right">960万円</td><td class="border border-gray-300 px-2 py-2 text-right">164万円</td><td class="border border-gray-300 px-2 py-2 text-right text-red-500 font-bold">19.3%<br><span class="text-gray-400 font-normal text-xs">（TM未計上）</span></td><td class="border border-gray-300 px-2 py-2 text-right text-red-500 font-bold">17.1%<br><span class="text-gray-400 font-normal text-xs">（TM未計上）</span></td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                                <tr class="bg-blue-50 font-bold"><td class="border border-gray-300 px-2 py-2">全社合計</td><td class="border border-gray-300 px-2 py-2 text-right">1億1,000万円</td><td class="border border-gray-300 px-2 py-2 text-right">1億1,608万円</td><td class="border border-gray-300 px-2 py-2 text-right">5,715万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500">52.0%</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500">49.2%</td><td class="border border-gray-300 px-2 py-2 text-right text-gray-400">（当日記入）</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-sm font-bold text-gray-700 mb-2 mt-5">冬季賞与の評価期間（6〜11月）：必達予算・目標予算の進捗</h3>
+                    <div class="table-container mb-3">
+                        <table class="min-w-full border-collapse border border-gray-300 text-xs md:text-sm">
+                            <thead class="bg-gray-100 text-gray-700">
+                                <tr>
+                                    <th class="border border-gray-300 px-2 py-2 text-left" rowspan="2">部署</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right" rowspan="2">6〜10月 累計<br>（速報）</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-center" colspan="3">必達予算（6〜11月）</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-center" colspan="3">目標予算（6〜11月）</th>
+                                </tr>
+                                <tr>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">予算</th><th class="border border-gray-300 px-2 py-2 text-right">進捗率</th><th class="border border-gray-300 px-2 py-2 text-right">あと</th>
+                                    <th class="border border-gray-300 px-2 py-2 text-right">予算</th><th class="border border-gray-300 px-2 py-2 text-right">進捗率</th><th class="border border-gray-300 px-2 py-2 text-right">あと</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">第一事業部（1課・2課）</td><td class="border border-gray-300 px-2 py-2 text-right">15,284万円</td><td class="border border-gray-300 px-2 py-2 text-right">14,400万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">106.1%</td><td class="border border-gray-300 px-2 py-2 text-right"><span class="text-green-600 font-bold">達成済み</span></td><td class="border border-gray-300 px-2 py-2 text-right">16,560万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">92.3%</td><td class="border border-gray-300 px-2 py-2 text-right">1,276万円</td></tr>
+                                <tr class="bg-gray-50"><td class="border border-gray-300 px-2 py-2 font-semibold">関東第2課</td><td class="border border-gray-300 px-2 py-2 text-right">10,296万円</td><td class="border border-gray-300 px-2 py-2 text-right">13,398万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">76.8%</td><td class="border border-gray-300 px-2 py-2 text-right">3,102万円</td><td class="border border-gray-300 px-2 py-2 text-right">15,408万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">66.8%</td><td class="border border-gray-300 px-2 py-2 text-right">5,112万円</td></tr>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">関東第3課</td><td class="border border-gray-300 px-2 py-2 text-right">8,607万円</td><td class="border border-gray-300 px-2 py-2 text-right">12,300万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">70.0%</td><td class="border border-gray-300 px-2 py-2 text-right">3,693万円</td><td class="border border-gray-300 px-2 py-2 text-right">14,400万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">59.8%</td><td class="border border-gray-300 px-2 py-2 text-right">5,793万円</td></tr>
+                                <tr class="bg-gray-50"><td class="border border-gray-300 px-2 py-2 font-semibold">西日本支社</td><td class="border border-gray-300 px-2 py-2 text-right">8,938万円</td><td class="border border-gray-300 px-2 py-2 text-right">10,530万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">84.9%</td><td class="border border-gray-300 px-2 py-2 text-right">1,592万円</td><td class="border border-gray-300 px-2 py-2 text-right">12,108万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">73.8%</td><td class="border border-gray-300 px-2 py-2 text-right">3,170万円</td></tr>
+                                <tr><td class="border border-gray-300 px-2 py-2 font-semibold">横浜支社（住宅M・TM）<br><span class="text-gray-400 font-normal text-xs">（TMの10月分未計上）</span></td><td class="border border-gray-300 px-2 py-2 text-right">3,419万円</td><td class="border border-gray-300 px-2 py-2 text-right">4,944万円</td><td class="border border-gray-300 px-2 py-2 text-right text-green-600 font-bold">69.2%</td><td class="border border-gray-300 px-2 py-2 text-right">1,525万円</td><td class="border border-gray-300 px-2 py-2 text-right">5,760万円</td><td class="border border-gray-300 px-2 py-2 text-right text-orange-500 font-bold">59.4%</td><td class="border border-gray-300 px-2 py-2 text-right">2,341万円</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-1">※10月の数値は「R8.10月売上集計表」の途中集計（締日11/8前の速報値）。関東第3課（SO）・TMの10月分は未計上です。</p>
+                    <p class="text-xs text-gray-500 mb-1">※6〜11月の予算・累計は、売上集計表の【必達】【目標】欄（6-11月予算）より。関東第3課（SO）は同欄に予算がないため記載していません。</p>
+                    <p class="text-xs text-gray-500">※進捗の色分け：緑＝60%以上／橙＝45〜60%／赤＝45%未満。</p>
+                </div>
+            </section>
+
+            <!-- 2. 各部門からの共有・検討事項 -->
+            <section class="w-full h-full flex-shrink-0 overflow-y-auto px-4 md:px-8 pb-28 pt-2">
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-gray-300 min-h-full">
+                    <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center text-gray-800 border-b pb-2">
+                        <i data-lucide="messages-square" class="w-6 h-6 mr-3 text-blue-600"></i>
+                        2. 各部門からの共有・検討事項
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="flex items-start bg-red-50/50 p-4 rounded-lg border border-red-100">
+                            <i data-lucide="headset" class="w-5 h-5 mr-3 text-red-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">シンクリモート（遠隔支援サービス）のトライアル終了について <span class="chip chip-r ml-1 text-xs">要判断</span></span>
+                                <p class="text-gray-600 text-sm">トライアルは10/25で終了しました。年契約（月額約10万円）のため、使ってみた感想と、今後使う場面があるかを各課から伺い、契約するかどうかを判断します。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <i data-lucide="moon" class="w-5 h-5 mr-3 text-gray-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">夜間連絡先の対応について</span>
+                                <p class="text-gray-600 text-sm">（※詳細は当日ご説明）</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <i data-lucide="hard-hat" class="w-5 h-5 mr-3 text-gray-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">外注先関連：月光設備様についての共有</span>
+                                <p class="text-gray-600 text-sm">西日本支社 小﨑さん・松井支社長より</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <i data-lucide="factory" class="w-5 h-5 mr-3 text-gray-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">先週訪問したステンレス工場様の所感と今後について</span>
+                                <p class="text-gray-600 text-sm">東部長より</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 業務連絡・周知事項 -->
+            <section class="w-full h-full flex-shrink-0 overflow-y-auto px-4 md:px-8 pb-28 pt-2">
+                <div class="bg-white p-5 md:p-6 rounded-xl shadow-sm border-t-4 border-gray-300 min-h-full">
+                    <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center text-gray-800 border-b pb-2">
+                        <i data-lucide="megaphone" class="w-6 h-6 mr-3 text-blue-600"></i>
+                        3. 業務連絡・周知事項（社長より）
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="flex items-start bg-blue-50/50 p-4 rounded-lg border border-blue-100">
+                            <i data-lucide="gift" class="w-5 h-5 mr-3 text-blue-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">今期の決算賞与について（確認）</span>
+                                <ul class="text-gray-600 text-sm space-y-1 list-disc pl-4">
+                                    <li>全社の目標粗利予算（13.9億円）を達成したら支給。全員に「全社達成分」5万円＋部署ごとの「基準ライン」を超えて上積みした粗利の2割を部署で山分け。</li>
+                                    <li>各課の基準ラインは、所属長からメンバーへ伝達をお願いします。</li>
+                                    <li>メンバーからの質問は、所属長経由で社長までお寄せください。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <i data-lucide="party-popper" class="w-5 h-5 mr-3 text-gray-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">本社忘年会の日程予定</span>
+                                <p class="text-gray-600 text-sm">11/16（月）、11/19（木）</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-red-50/50 p-4 rounded-lg border border-red-100">
+                            <i data-lucide="vote" class="w-5 h-5 mr-3 text-red-500 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <span class="font-bold text-gray-800 block mb-1">【重要・リマインド】36協定 代表者選出の信任投票について</span>
+                                <p class="text-gray-600 text-sm">期限：<strong class="text-red-600">10/31（土）16:00まで</strong>。未投票の方は至急ご対応ください。必ず自分の業務用アカウントで回答してください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- 下部タブナビゲーション -->
+    <nav class="absolute bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] z-20 pb-safe">
+        <div class="max-w-5xl mx-auto flex overflow-x-auto hide-scrollbar snap-x snap-mandatory px-2">
+            <button onclick="goToSlide(0)" class="tab-btn flex-1 min-w-[72px] py-3 px-1 flex flex-col items-center justify-center gap-1 text-blue-600 border-t-2 border-blue-600 bg-blue-50 transition-all snap-center"><i data-lucide="bar-chart-3" class="w-5 h-5"></i><span class="text-[10px] font-bold whitespace-nowrap">着地予想</span></button>
+            <button onclick="goToSlide(1)" class="tab-btn flex-1 min-w-[72px] py-3 px-1 flex flex-col items-center justify-center gap-1 text-gray-500 border-t-2 border-transparent hover:bg-gray-50 transition-all snap-center"><i data-lucide="messages-square" class="w-5 h-5"></i><span class="text-[10px] font-bold whitespace-nowrap">共有・検討</span></button>
+            <button onclick="goToSlide(2)" class="tab-btn flex-1 min-w-[72px] py-3 px-1 flex flex-col items-center justify-center gap-1 text-gray-500 border-t-2 border-transparent hover:bg-gray-50 transition-all snap-center"><i data-lucide="megaphone" class="w-5 h-5"></i><span class="text-[10px] font-bold whitespace-nowrap">業務連絡</span></button>
+        </div>
+    </nav>
+
+    <script>
+        lucide.createIcons();
+
+        let currentSlide = 0;
+        const track = document.getElementById('sliderTrack');
+        const buttons = document.querySelectorAll('.tab-btn');
+        const totalSlides = buttons.length;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('text-blue-600', 'border-blue-600', 'bg-blue-50');
+                    btn.classList.remove('text-gray-500', 'border-transparent', 'hover:bg-gray-50');
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    btn.classList.remove('text-blue-600', 'border-blue-600', 'bg-blue-50');
+                    btn.classList.add('text-gray-500', 'border-transparent', 'hover:bg-gray-50');
+                }
+            });
+        }
+
+        let startX = 0;
+        let isDragging = false;
+        track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDragging = true; }, {passive: true});
+        track.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            const diff = startX - e.changedTouches[0].clientX;
+            if (diff > 50 && currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
+            else if (diff < -50 && currentSlide > 0) goToSlide(currentSlide - 1);
+            isDragging = false;
+        }, {passive: true});
+
+        window.addEventListener('resize', () => {
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            setTimeout(() => { track.style.transition = 'transform 300ms ease-in-out'; }, 50);
+        });
+    </script>
+    <style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</body>
+</html>
