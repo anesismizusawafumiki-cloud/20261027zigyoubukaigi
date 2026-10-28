@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10月度事業部会議ダイジェスト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ground: #F5F7FB;
+    --surface: #FFFFFF;
+    --surface-soft: #EEF2FA;
+    --ink: #1F2937;
+    --ink-soft: #5B6472;
+    --ink-faint: #8B93A1;
+    --line: #E2E7F0;
+    --accent: #2653D6;
+    --accent-deep: #16234F;
+    --accent-soft: #E7EDFC;
+    --good: #157A45;
+    --good-soft: #E4F5EA;
+    --warn: #B4670A;
+    --warn-soft: #FBF0DE;
+    --bad: #C22A2A;
+    --bad-soft: #FBE8E8;
+    --neutral: #6B7280;
+    --neutral-soft: #EEF0F3;
+    --shadow: 0 1px 2px rgba(22, 35, 79, 0.06), 0 8px 24px -12px rgba(22, 35, 79, 0.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #10131C;
+      --surface: #181C28;
+      --surface-soft: #1E2432;
+      --ink: #E7EAF2;
+      --ink-soft: #A7AEBD;
+      --ink-faint: #737C8F;
+      --line: #2A3040;
+      --accent: #6C8CF5;
+      --accent-deep: #DCE4FB;
+      --accent-soft: #202A47;
+      --good: #4ADE8B;
+      --good-soft: #17301F;
+      --warn: #F0A93F;
+      --warn-soft: #332409;
+      --bad: #F27272;
+      --bad-soft: #351A1A;
+      --neutral: #9099A9;
+      --neutral-soft: #232838;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.55);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #10131C;
+    --surface: #181C28;
+    --surface-soft: #1E2432;
+    --ink: #E7EAF2;
+    --ink-soft: #A7AEBD;
+    --ink-faint: #737C8F;
+    --line: #2A3040;
+    --accent: #6C8CF5;
+    --accent-deep: #DCE4FB;
+    --accent-soft: #202A47;
+    --good: #4ADE8B;
+    --good-soft: #17301F;
+    --warn: #F0A93F;
+    --warn-soft: #332409;
+    --bad: #F27272;
+    --bad-soft: #351A1A;
+    --neutral: #9099A9;
+    --neutral-soft: #232838;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.55);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  h1, h2, h3 {
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    text-wrap: balance;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .num { font-family: "Inter", "Noto Sans JP", sans-serif; font-variant-numeric: tabular-nums; }
+
+  /* ---- header ---- */
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .masthead h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .masthead .sub {
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .meta-chip b { color: var(--ink); font-weight: 600; }
+
+  /* ---- stat tiles ---- */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .stat-tile {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 16px 14px;
+    box-shadow: var(--shadow);
+  }
+  .stat-tile .label {
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+  .stat-tile .value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .stat-tile .value.accent { color: var(--accent); }
+  .stat-tile .value.good { color: var(--good); }
+  .stat-tile .value.bad { color: var(--bad); }
+  .stat-tile .note {
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+
+  /* ---- section ---- */
+  section { margin-bottom: 40px; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .section-head .idx {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+  .section-head h2 { font-size: 19px; font-weight: 700; }
+  .lede { color: var(--ink-soft); font-size: 14px; margin: -8px 0 18px; }
+
+  /* ---- dept cards ---- */
+  .dept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .dept-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dept-card .dept-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .dept-card .dept-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .pill {
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pill.good { background: var(--good-soft); color: var(--good); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); }
+  .pill.neutral { background: var(--neutral-soft); color: var(--neutral); }
+
+  .bars { display: flex; flex-direction: column; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 40px 1fr 44px; align-items: center; gap: 8px; }
+  .bar-row .bar-label { font-size: 11.5px; color: var(--ink-faint); }
+  .bar-track {
+    height: 7px;
+    border-radius: 999px;
+    background: var(--surface-soft);
+    overflow: hidden;
+  }
+  .bar-fill { height: 100%; border-radius: 999px; }
+  .bar-fill.good { background: var(--good); }
+  .bar-fill.warn { background: var(--warn); }
+  .bar-fill.bad { background: var(--bad); }
+  .bar-fill.neutral { background: var(--neutral); }
+  .bar-row .bar-value {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .dept-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    border-top: 1px dashed var(--line);
+    padding-top: 10px;
+    margin-top: 2px;
+  }
+
+  /* ---- announcement list ---- */
+  .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .notice {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+  .notice .tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 4px 8px;
+    text-align: center;
+    height: fit-content;
+  }
+  .notice .body-text { font-size: 13.5px; color: var(--ink); }
+  .notice .body-text b { color: var(--ink); }
+  .notice .body-text .sub { color: var(--ink-soft); font-size: 12.5px; display: block; margin-top: 3px; }
+
+  /* ---- table ---- */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--surface); }
+  th, td { padding: 10px 14px; text-align: right; white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    background: var(--surface-soft);
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
+  tbody td.dept { font-weight: 600; }
+  tfoot td { border-top: 2px solid var(--line); font-weight: 700; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 720px) {
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .dept-grid { grid-template-columns: 1fr; }
+    .notice { grid-template-columns: 1fr; }
+    .notice .tag { width: fit-content; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <span class="eyebrow">株式会社アネシス &nbsp;/&nbsp; 事業部会議ダイジェスト</span>
+    <h1>2026年10月度 月末事業部会議 ダイジェスト</h1>
+    <p class="sub">議事録の要点をまとめた社内共有版です。詳細は正式な議事録をご参照ください。</p>
+    <div class="meta-row">
+      <span class="meta-chip">🗓 <b>2026年10月27日(火)</b> 13:00〜14:15頃</span>
+      <span class="meta-chip">📍 <b>渋谷本社 会議室</b> ＋ オンライン</span>
+      <span class="meta-chip">👥 室井会長・水澤・東・宮本・奥田・久保木・松井・氏原</span>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-tile"><div class="label">10月 全社粗利（速報）</div><div class="value accent num">5,715<span style="font-size:14px;">万円</span></div><div class="note">月1.1億円に対し 52.0%</div></div>
+    <div class="stat-tile"><div class="label">今月の締日まで</div><div class="value num">12<span style="font-size:14px;">日</span></div><div class="note">11月8日締め</div></div>
+    <div class="stat-tile"><div class="label">冬季賞与 必達</div><div class="value good">第一事業部</div><div class="note">達成済み・目標まであと1,276万円</div></div>
+    <div class="stat-tile"><div class="label">36協定 信任投票</div><div class="value bad num">10/31<span style="font-size:14px;"> 16:00</span></div><div class="note">東京本社はあと15名不足</div></div>
+  </div>
+
+  <section>
+    <div class="section-head"><span class="idx">01</span><h2>夜間当番の運用</h2></div>
+    <p class="lede">氏原支社長の途中退席に合わせ、最初の議題として議論。制度面は社労士確認後に次回へ持ち越し。</p>
+    <div class="notice-list"><div class="notice"><span class="tag">決定</span><div class="body-text">夜間当番の呼出しは<b>1人あたり間隔を長めに</b>空け、<b>1人でも2回</b>はかける。<span class="sub">トイレ等で一瞬取れなかっただけで次に回るケースを減らすため（東部長要望・氏原支社長了承）。</span></div></div><div class="notice"><span class="tag">決定</span><div class="body-text">コールセンターのスマホで<b>LINEグループ</b>を作成（夜間当番者全員参加・普段は通知オフ）。<span class="sub">電車内など電話に出られない時の確認・指示用。緊急時は電話が必須。折り返し先としてスマホ番号も周知。</span></div></div><div class="notice"><span class="tag">検討</span><div class="body-text">kintoneで担当業者を調べ、<b>コールセンターから業者へ電話</b>する運用のルール化を検討。<span class="sub">業者を止める／止めないの入電を減らす狙い。アルバイトのみの日（月5〜6日）は当面対象外。</span></div></div><div class="notice"><span class="tag">持ち越し</span><div class="body-text">現行ルール（深夜残業 最低30分付与）の妥当性を<b>水澤が社労士に確認</b>。手当・固定時間付与などの制度面は次回へ。<span class="sub">残業代が付かない職位でも深夜割増は付くため、該当時は必ず付与を。</span></div></div></div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="idx">02</span><h2>10月度 部署別ハイライト</h2></div>
+    <p class="lede">10月の基準ライン・目標予算に対する進捗率（速報値）と、各課からの着地予想。各課の基準ラインの金額は所属長から個別に伝達します。締日は11月8日。</p>
+    <div class="dept-grid">
+      <div class="dept-card">
+        <div class="dept-top"><span class="dept-name">第一事業部（宮本・東）</span><span class="pill good">必達 達成済み</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-label">基準</span><div class="bar-track"><div class="bar-fill warn" style="width:52.7%"></div></div><span class="bar-value" style="color:var(--warn)">52.7%</span></div><div class="bar-row"><span class="bar-label">目標</span><div class="bar-track"><div class="bar-fill warn" style="width:57.3%"></div></div><span class="bar-value" style="color:var(--warn)">57.3%</span></div></div>
+        <p class="dept-note">10月着地予想：1課（宮本）粗利1,580万〜1,670万円（11月以降はウェルパーク案件が鍵）。2課（東）は雨漏り・地震の谷間で必達ギリギリだが、11月は地震応急対応分の本工事で挽回見込み。冬季賞与の目標予算もあと1,276万円で10月中に達成見込み。</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-top"><span class="dept-name">関東第2課（奥田）</span><span class="pill good">基準超え見込み</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-label">基準</span><div class="bar-track"><div class="bar-fill warn" style="width:57.4%"></div></div><span class="bar-value" style="color:var(--warn)">57.4%</span></div><div class="bar-row"><span class="bar-label">目標</span><div class="bar-track"><div class="bar-fill warn" style="width:51.4%"></div></div><span class="bar-value" style="color:var(--warn)">51.4%</span></div></div>
+        <p class="dept-note">10月着地予想：2,300万〜2,500万円で、基準ラインは上回る見込み。大型案件（500万円超）は別途決裁確認。</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-top"><span class="dept-name">関東第3課（久保木）</span><span class="pill warn">発注待ち多数</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-label">基準</span><div class="bar-track"><div class="bar-fill warn" style="width:54.7%"></div></div><span class="bar-value" style="color:var(--warn)">54.7%</span></div><div class="bar-row"><span class="bar-label">目標</span><div class="bar-track"><div class="bar-fill warn" style="width:47.9%"></div></div><span class="bar-value" style="color:var(--warn)">47.9%</span></div></div>
+        <p class="dept-note">10月着地予想：1,800万〜1,900万円。9月見積もりが約20件保留中で、一気に発注が入る可能性あり。SOは前倒し完了で売上約5,000万・粗利約1,200万円。すき家（白）350店舗のキャッシュレス端末入替（12〜3月）も受注の可能性。</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-top"><span class="dept-name">西日本支社（松井）</span><span class="pill good">進捗トップ</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-label">基準</span><div class="bar-track"><div class="bar-fill good" style="width:83.3%"></div></div><span class="bar-value" style="color:var(--good)">83.3%</span></div><div class="bar-row"><span class="bar-label">目標</span><div class="bar-track"><div class="bar-fill good" style="width:74.3%"></div></div><span class="bar-value" style="color:var(--good)">74.3%</span></div></div>
+        <p class="dept-note">10月着地予想：売上6,000万円弱・粗利1,700万円前後（粗利率27〜28%、上がれば1,800万円）。11月は大型案件がなく下がる見込み。</p>
+      </div>
+      <div class="dept-card">
+        <div class="dept-top"><span class="dept-name">横浜（住宅M・TM／氏原）</span><span class="pill neutral">TM未計上</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-label">基準</span><div class="bar-track"><div class="bar-fill bad" style="width:19.3%"></div></div><span class="bar-value" style="color:var(--bad)">19.3%</span></div><div class="bar-row"><span class="bar-label">目標</span><div class="bar-track"><div class="bar-fill bad" style="width:17.1%"></div></div><span class="bar-value" style="color:var(--bad)">17.1%</span></div></div>
+        <p class="dept-note">氏原支社長は途中退席。10月はおおむね前回報告どおりの着地見込み（前回10/13時点：TMは単独で必達超え見込み・目標は厳しい）。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="idx">03</span><h2>冬季賞与の評価期間（6〜11月）</h2></div>
+    <p class="lede">6〜10月累計（10月は途中集計）。単位：万円。第一事業部は1課・2課合算、横浜支社はTMの10月分未計上。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>部署</th><th>累計</th><th>必達予算</th><th>必達進捗</th><th>必達まで</th><th>目標予算</th><th>目標進捗</th><th>目標まで</th></tr></thead>
+        <tbody><tr><td class="dept">第一事業部</td><td class="num">15,284</td><td class="num">14,400</td><td class="num" style="color:var(--good)">106.1%</td><td class="num" style="color:var(--good);font-weight:700">達成済み</td><td class="num">16,560</td><td class="num" style="color:var(--good)">92.3%</td><td class="num">1,276</td></tr><tr><td class="dept">関東第2課</td><td class="num">10,296</td><td class="num">13,398</td><td class="num" style="color:var(--good)">76.8%</td><td class="num">3,102</td><td class="num">15,408</td><td class="num" style="color:var(--good)">66.8%</td><td class="num">5,112</td></tr><tr><td class="dept">関東第3課</td><td class="num">8,607</td><td class="num">12,300</td><td class="num" style="color:var(--good)">70.0%</td><td class="num">3,693</td><td class="num">14,400</td><td class="num" style="color:var(--warn)">59.8%</td><td class="num">5,793</td></tr><tr><td class="dept">西日本支社</td><td class="num">8,938</td><td class="num">10,530</td><td class="num" style="color:var(--good)">84.9%</td><td class="num">1,592</td><td class="num">12,108</td><td class="num" style="color:var(--good)">73.8%</td><td class="num">3,170</td></tr><tr><td class="dept">横浜支社（住宅M・TM）</td><td class="num">3,419</td><td class="num">4,944</td><td class="num" style="color:var(--good)">69.2%</td><td class="num">1,525</td><td class="num">5,760</td><td class="num" style="color:var(--warn)">59.4%</td><td class="num">2,341</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="idx">04</span><h2>共有・決定事項</h2></div>
+    <div class="notice-list"><div class="notice"><span class="tag">要判断</span><div class="body-text"><b>シンクリモート</b>（年約120万円）は判断を持ち越し。サービス担当者による再説明の場を設定。<span class="sub">使いどころが限られる（ピーキー）との声。配線関連など遠隔指示には効果大。</span></div></div><div class="notice"><span class="tag">設備</span><div class="body-text"><b>水素式漏水調査機</b>（本体約220万円）の導入要望（東部長）。メーカーから話を聞いて別途検討。<span class="sub">関西では奈良のアクアテック社に1回15万円程度で外注可能。水抜き作業の安全面も確認。</span></div></div><div class="notice"><span class="tag">外注先</span><div class="body-text"><b>月光設備様</b>：リンガーハット様案件の鍵送付で当社が送付先を誤り、冷たい対応を受けた件を共有。<span class="sub">鍵は原則「顧客→当社→業者」で本社経由。同様の対応があれば共有を。</span></div></div><div class="notice"><span class="tag">外注先</span><div class="body-text"><b>横浜ステンレス工業㈱</b>：溶接の仕上がりは良好、曲げ設備なし。300角の試作を発注済み。<span class="sub">鉄製18,500円・ステン約4万円。ほか2社程度にも試作を依頼し、比較のうえ業者登録。</span></div></div><div class="notice"><span class="tag">賞与</span><div class="body-text">決算賞与：目標粗利予算<b>13.9億円</b>達成で、全員に5万円＋基準ライン超過粗利の2割を部署で山分け。<span class="sub">基準ラインは所属長からメンバーへ伝達を。必達達成の場合は例年通りの決算賞与。</span></div></div><div class="notice"><span class="tag">労務</span><div class="body-text"><b style="color:var(--bad)">36協定 代表者信任投票：10/31（土）16:00締切</b>。東京本社はあと15名不足。<span class="sub">西日本支社は充足済み。各所属長から呼びかけをお願いします。</span></div></div><div class="notice"><span class="tag">労務</span><div class="body-text">8・9月入社者の<b>特別休日</b>は<b>1月末まで</b>に消化を。<span class="sub">8月入社は11/1〜、9月入社は12月〜付与。年末年始に充てるのも可。</span></div></div><div class="notice"><span class="tag">検討</span><div class="body-text"><b>ウェザーニュース for Business</b>：東部長要望。オンライン打ち合わせで内容・金額を確認後、社長に相談（室井会長）。</div></div><div class="notice"><span class="tag">予定</span><div class="body-text">本社忘年会：<b>11/16（月）・11/19（木）</b>。次回事業部会議：<b>11/10</b>、後半は<b>11/27（金）13:00〜</b>。<span class="sub">本会議後、15:00からAI関連の会議。</span></div></div></div>
+  </section>
+
+  <footer>
+    <span>株式会社アネシス — 社内共有資料（Internal Use Only）</span>
+    <span>作成：水澤　／　次回締日：11月8日</span>
+  </footer>
+</div>
+</body>
+</html>
